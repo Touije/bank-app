@@ -1,13 +1,15 @@
 package com.bank.compte.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import java.math.BigDecimal;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Compte {
@@ -20,4 +22,7 @@ public class Compte {
     private String typeCompte; // COURANT, EPARGNE
     private Long clientId;
     private boolean actif;
+    private String emailClient;
+    private String rib;
+    private String codeCarte;
 } 
